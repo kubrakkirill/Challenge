@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Timeline</title>
+    <link rel="stylesheet" href="/editPage.css">
+</head>
+<body>
+<header>
+    <div class="logo">The Facebook</div>
+    <div class="header-path header-style">
+        <p>http://localhost:3000/feed/edit/<%= feed._id%></p>
+    </div>
+    <div class="header-search header-style">Search...</div>
+</header>
+<section>
+    <form action="/editFeed/<%= feed._id %>" method="POST">
+        <h1>Edit a post</h1>
+        <input type="text" name="name" id="name" placeholder="name" value="<%=feed.name%>">
+        <input type="text" name="message" id="message" placeholder="message" value="<%=feed.message%>">
+        <button id="btnSubmit" class="btn">Submit</button>
+    </form>
+</section>
+<footer>
+    <p>Created by Kyrylo Kubrak</p>
+</footer>
+</body>
+</html>

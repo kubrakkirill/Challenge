@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Timeline</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+    <div class="logo">The Facebook</div>
+    <div class="header-path header-style">
+        <p>http://localhost:3000/feed</p>
+    </div>
+    <div class="header-search header-style">Search...</div>
+</header>
+<section>
+    <h1 class="mainTitle">Welcome to Facebook</h1>
+    <form action="/feed" method="post">
+        <h3>Add a post</h3>
+        <input type="text" name="name" id="name" placeholder="name">
+        <input type="text" name="message" id="message" placeholder="message">
+        <button id="btnAdd">Add</button>
+    </form>
+    <div>
+        <ul>
+            <% feed.forEach(function(feed) { %>
+                <li class="feedCard">
+                    <h1 class="feedName"><%= feed.name %></h1>
+                    <div class="feedContent">
+                        <p class="feedMessage"><%= feed.message.slice(0, 100) %></p>
+                        <span class="feedInfo">
+                            <a href="/feed/<%= feed.id%>">See more</a>
+                            <%= feed.created_at %>
+                        </span>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</section>
+<footer>
+    <p>Created by Kyrylo Kubrak</p>
+</footer>
+</body>
+</html>

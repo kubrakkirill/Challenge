@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Mynerve', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 auto;
+    max-width: 1000px;
+    border: 3px solid black;
+    border-radius: 10px 10px 10px 10px;
+}
+header{
+    background-color: #c0c0c0;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid black;
+}
+.header-path{
+    width: 65%;
+}
+.header-search{
+    width: 15%;
+}
+.header-style{
+    padding-left: 5px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px 10px 10px 10px;
+}
+footer{
+    background-color: #c0c0c0;
+    padding: 15px;
+    border-top: 3px solid black;
+}
+section{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.mainTitle{
+    font-size: 50px;
+    align-self: flex-end;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input{
+    border: 3px solid black;
+    padding: 5px;
+}
+#name{
+    border-radius: 5px;
+    width: 150px;
+}
+#message{
+    border-radius: 5px;
+    width: 400px;
+    height: 150px;
+}
+#btnAdd{
+    padding: 3px;
+    border: 3px solid black;
+    color: white;
+    font-weight: bold;
+    background-color: #09bb09;
+    border-radius: 5px;
+    max-width: 60px;
+}
+.feedName{
+    margin-left: 50px;
+    font-size: 50px;
+}
+.feedCard, .feedInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.feedCard{
+    margin-bottom: 20px;
+}
+.feedContent{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.feedMessage{
+    max-width: 50%;
+}
+.err{
+    color: red;
+    font-size: 40px;
+}

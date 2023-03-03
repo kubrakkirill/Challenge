@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Timeline</title>
+    <link rel="stylesheet" href="/feedPage.css">
+</head>
+<body>
+<header>
+    <div class="logo">The Facebook</div>
+    <div class="header-path header-style">
+        <p>http://localhost:3000/feed/<%= feed._id%></p>
+    </div>
+    <div class="header-search header-style">Search...</div>
+</header>
+<section>
+    <h1 class="mainTitle">Welcome to Facebook</h1>
+    <div  class="feedCard">
+        <div class="feedContent">
+            <h1><%= feed.name%></h1>
+            <p><%= feed.message%></p>
+        </div>
+        <div class="feedInfo">
+            <h5><%= feed.created_at%></h5>
+            <div class="buttons">
+                <form action="/deleteFeed/<%= feed._id %>" method="POST">
+                    <button id="btnDelete" class="btn">Delete</button>
+                </form>
+                <form action="/feed/edit/<%= feed._id %>" method="get">
+                    <button id="btnEdit" class="btn">Edit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <p>Created by Kyrylo Kubrak</p>
+</footer>
+</body>
+</html>
