@@ -23,6 +23,7 @@ const addFeed = (request, response) => {
             console.log(error)
         })
 }
+
 const getOneFeed = (req, res) => {
     feedModel.findById(req.params.feedId)
         .then( result => {
